@@ -2,8 +2,8 @@
 
 ![Headshot](photo.jpeg)
 
-Phone: 9949210326  
-Email: [nagabrahmendra2904@gmail.com](mailto:nagabrahmendra2904@gmail.com)  
+Phone: +1 (410) 852-8911  
+Email: [devarapallinagabrahmendra@gmail.com](mailto:devarapallinagabrahmendra@gmail.com)  
 
 ---
 
