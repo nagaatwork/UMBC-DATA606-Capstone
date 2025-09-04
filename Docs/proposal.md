@@ -1,6 +1,44 @@
+# Project Title: Predicting Hospital Readmissions
 
+### Prepared for  
+**UMBC Data Science Master's Capstone**  
+Instructor: Dr. Chaojie (Jay) Wang
 
-## 3 Dataset Overview – Predicting Hospital Readmissions
+---
+
+### Author  
+**Naga Brahmendra Chowdary Devarapalli**
+
+- GitHub Repository: [https://github.com/nagaatwork/UMBC-DATA606-Capstone](https://github.com/nagaatwork/UMBC-DATA606-Capstone)
+- LinkedIn Profile: [https://www.linkedin.com/in/your-linkedin-id](https://www.linkedin.com/in/your-linkedin-id)
+
+---
+
+### Introduction
+
+This project focuses on predicting the probability of hospital readmission within 30 days for diabetic patients using the extensively studied *Diabetes 130-US hospitals (1999–2008)* dataset. Hospital readmissions are an important factor in measuring healthcare quality, and preventing unnecessary readmissions not only improves patient outcomes but also cuts costs. By analysing with demographic details, clinical information, and encounter features, this project opens up a machine learning pipeline to recognize patients at a higher risk of readmission shortly after discharge.
+
+---
+
+### Why Does It Matter?
+
+Readmission rates are not only a clinical concern but also a financial and policy concern. Hospitals face significant penalties from regulatory agencies, such as Medicare and Medicaid, when readmission rates exceed benchmarks. Beyond cost, frequent readmissions often signal gaps in patient care, such as poor discharge planning, inadequate follow-up, or unaddressed comorbidities. Accurately predicting which patients are at risk allows healthcare providers to allocate resources more effectively—such as scheduling follow-up appointments, offering targeted interventions, or providing additional patient education—to reduce avoidable readmissions and improve quality of care.
+
+---
+
+### Research Questions
+
+This project has three main questions it intends to answer:
+
+1. **Do machine learning models have the ability to predict 30-day readmission with reasonable accuracy given encounter-level data?**
+
+2. **Which are the most important factors affecting readmission: demographics, length of stay, lab results, medications, or admission/discharge details?**
+
+3. **How can such a model be incorporated into a useful pipeline that clinicians and hospital administrators can use to assist them with the early identification of high-risk patients?**
+
+---
+
+##  Dataset Overview 
 
 ### Data Source
 - The dataset is sourced from the **UCI Machine Learning Repository**:  
