@@ -95,7 +95,124 @@ The following columns are selected as features for machine learning:
 
 ---
 
-### Notes
-- Missing values such as `"?"` were replaced with `NaN`.
-- Age ranges like `[60-70)` were converted to numeric midpoints.
-- Categorical ID columns can be mapped to readable labels using the `IDS_mapping.csv` file.
+### 4. Exploratory Data Analysis (EDA)
+
+---
+
+#### Focus Area
+Our target variable is `readmit_30d`, which indicates whether a patient was readmitted within 30 days.
+
+The analysis focuses on:
+- Key numeric features: `time_in_hospital`, `num_lab_procedures`, `num_procedures`, `num_medications`, etc.
+- Categorical predictors: `age`, `gender`, `race`, `A1Cresult`, `max_glu_serum`, `admission_type_id`, etc.
+
+---
+
+#### Data Quality Checks
+
+- Missing Values:
+  - Replaced all "?" values with `NaN`
+  - Key columns like `weight`, `payer_code`, and `medical_specialty` had more than 40% missing values and were considered for removal
+
+- Duplicates:
+  - No exact duplicate rows were found
+
+---
+
+#### Transformation Requirements
+
+- `age` was converted from range brackets to midpoints
+- All numeric columns were converted to appropriate numeric types
+- String-type categorical columns will be encoded later
+
+No merging, melting, or pivoting was required at this stage.
+
+---
+#### External Data
+
+- No additional data sources like population or Census data were brought in
+- However, linking hospital quality ratings or comorbidity scores could enhance the model in future iterations
+
+---
+## Target Variable Distribution
+
+- Binary class imbalance:
+  - Class 0 (Not readmitted within 30 days): **90.6%**
+  - Class 1 (Readmitted within 30 days): **9.4%**
+
+---
+
+## Descriptive Statistics by Readmission
+
+| Variable              | Not Readmitted | Readmitted <30d |
+|-----------------------|----------------|-----------------|
+| time_in_hospital      | 4.35           | 4.77            |
+| num_lab_procedures    | 42.95          | 44.23           |
+| num_medications       | 15.91          | 16.90           |
+| number_outpatient     | 0.36           | 0.44            |
+| number_emergency      | 0.18           | 0.36            |
+| number_inpatient      | 0.56           | 1.22            |
+| number_diagnoses      | 7.39           | 7.69            |
+
+---
+
+##  Visualizations
+
+### C. Target Variable Visualization — Readmission Status
+
+The bar chart below shows the distribution of the original `readmitted` values:
+
+
+- **NO** (no readmission): Majority of patients fall into this category.
+- **>30** (readmitted after 30 days): Second largest group.
+- **<30** (readmitted within 30 days): Smallest group — this is the minority class that we are targeting.
+
+This visualization highlights the **imbalance** in the target variable, which justifies the need for **resampling techniques** like **SMOTE** during model training.
+
+➡️ Based on this, we created a **binary target variable `readmit_30d`**:
+- `1` → `<30` days
+- `0` → `NO` and `>30`
+
+
+### B. Categorical Features: Proportions Readmitted
+
+#### A1Cresult
+| Category | Proportion Readmitted |
+|----------|------------------------|
+| >7       | 10.05%                 |
+| >8       | 9.87%                  |
+| Norm     | 9.65%                  |
+
+#### Max Glucose Serum
+| Category | Proportion Readmitted |
+|----------|------------------------|
+| >200     | 12.46%                 |
+| >300     | 14.32%                 |
+| Norm     | 11.36%                 |
+
+#### Admission Type ID
+| ID | Description        | Readmit % |
+|----|--------------------|-----------|
+| 1  | Emergency          | 11.5%     |
+| 2  | Urgent             | 11.2%     |
+| 3  | Elective           | 10.4%     |
+| 4  | Newborn            | 10.0%     |
+| 5  | Not Available      | 10.3%     |
+| 6  | NULL               | 11.1%     |
+| 7  | Trauma Center      | 0.0%      |
+| 8  | Other              | 8.4%      |
+
+#### Admission Source ID
+Top sources with highest readmission:
+- ID 22 → 16.7%
+- ID 3 → 15.5%
+- ID 20 → 13.7%
+
+#### Discharge Disposition ID
+Top categories:
+- ID 12 (Hospice) → 66.7%
+- ID 15 (Short-term hospital) → 44.4%
+- ID 9 (Rehab) → 42.9%
+
+---
+
