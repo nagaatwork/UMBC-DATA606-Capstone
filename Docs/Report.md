@@ -22,7 +22,7 @@ Instructor: **Dr. Chaojie (Jay) Wang**
   https://github.com/nagaatwork/UMBC-DATA606-Capstone/blob/main/Docs/Presentation3.pptx
 
 - **YouTube Demo / Presentation Video:**  
-  <ADD YOUR YOUTUBE LINK HERE>
+  https://youtu.be/KfS0EzmKqCE
 
 ---
 
