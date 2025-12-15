@@ -19,7 +19,7 @@ Instructor: **Dr. Chaojie (Jay) Wang**
   https://www.linkedin.com/in/your-linkedin-id
 
 - **Final Presentation Slides:**  
-  Docs/Presentation3.pptx
+  https://github.com/nagaatwork/UMBC-DATA606-Capstone/blob/main/Docs/Presentation3.pptx
 
 - **YouTube Demo / Presentation Video:**  
   <ADD YOUR YOUTUBE LINK HERE>
