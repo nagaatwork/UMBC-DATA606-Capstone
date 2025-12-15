@@ -19,7 +19,7 @@ Instructor: **Dr. Chaojie (Jay) Wang**
   https://www.linkedin.com/in/your-linkedin-id
 
 - **Final Presentation Slides:**  
-  <ADD YOUR PRESENTATION LINK HERE>
+  <Docs/Presentation3 [Autosaved].pptx>
 
 - **YouTube Demo / Presentation Video:**  
   <ADD YOUR YOUTUBE LINK HERE>
