@@ -6,11 +6,11 @@ A Streamlit web app that predicts 30‑day readmission risk for diabetic patient
 
 ### Single‑Patient Prediction
 
-![Single patient form](images/single_patient.png)
+![Single patient form](single.png)
 
 ### Batch CSV Prediction
 
-![Batch CSV upload](images/batch_upload.png)
+![Batch CSV upload](batch.png)
 
 
 ## Features
